@@ -12,14 +12,14 @@ const Navbar = () => {
   return (
     <>
       {/* component */}
-      <div className="flex flex-wrap place-items-center">
+      <div className="flex flex-wrap place-items-center border-b-1 border-gray-300 ">
         <section className="relative mx-auto w-full">
           {/* navbar */}
           <nav className="flex justify-between bg-gray-100 text-black w-full">
             <div className="px-5 xl:px-12 py-6 flex w-full items-center">
               <a className="text-3xl font-bold font-heading" href="#">
-                {/* <img class="h-9" src="logo.png" alt="logo"> */}
-                Logo Here.
+                <img class="h-15" src="https://play-lh.googleusercontent.com/MOFZ1zvq6Yg45eeBHTDtNIdP2yUA9QAV_sLjY034QJgZN4cko8fW-cnQdvZPg0vrE9g7=w600-h300-pc0xffffff-pd" alt="logo"/>
+              
               </a>
               {/* Nav Links */}
               <ul className="hidden xl:flex px-4 mx-auto font-semibold font-heading space-x-12">
