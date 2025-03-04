@@ -4,11 +4,14 @@ import Home from './page/Home';
 
 const App = () => {
   return (
+   
+   
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
+ 
   );
 };
 
