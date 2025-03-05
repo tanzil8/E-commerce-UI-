@@ -28,7 +28,7 @@ import { Link } from "react-router-dom"
 
 export default function ShopCategories() {
   const categories = [
-    { name: "Computer & Office", icon: <Monitor className="h-4 w-4" /> },
+    { name: "Computer & Office", icon: <Monitor className="h-10 w-4" /> },
     { name: "Collectibles & Toys", icon: <Gamepad2 className="h-4 w-4" /> },
     { name: "Books", icon: <BookOpen className="h-4 w-4" /> },
     { name: "Fashion/Clothes", icon: <ShoppingBag className="h-4 w-4" /> },
@@ -57,9 +57,9 @@ export default function ShopCategories() {
   return (
     <section className="py-8 antialiased dark:bg-gray-900 md:py-1">
         <h1 className="mb-12 pl-6  font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black">
-  Flash Product
+ Category
 </h1>
-      <div className="p-6">
+      <div className="pr-4 pl-4">
         <div className="mb-4 flex items-center justify-between gap-4 md:mb-8">
 
 
