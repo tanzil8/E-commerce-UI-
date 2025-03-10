@@ -6,8 +6,11 @@ import ShopCategories from '../component/categories'
 import BestSeeling from '../component/bestSeeling'
 import Banner from '../component/secBanner'
 import Product from '../component/product'
-import ImageBanner from '../component/footerBanner'
+
 import Footer from '../component/footer'
+import ImgLayout from '../component/footerBanner'
+
+
 
 const Home = () => {
   return (
@@ -20,7 +23,7 @@ const Home = () => {
   <BestSeeling/>
   <Banner/>
   <Product/>
-  <ImageBanner/>
+ <ImgLayout/>
    <Footer/>
 
   </div>

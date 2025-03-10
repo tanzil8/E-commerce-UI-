@@ -56,9 +56,9 @@ export default function ShopCategories() {
 
   return (
     <section className="py-8 antialiased dark:bg-gray-900 md:py-1">
-        <h1 className="mb-12 pl-6  font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black">
+       <h1 className="mb-12 pl-6  font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black">
  Category
-</h1>
+</h1> 
       <div className="pr-4 pl-4">
         <div className="mb-4 flex items-center justify-between gap-4 md:mb-8">
 
