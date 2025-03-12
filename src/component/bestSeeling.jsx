@@ -1,22 +1,33 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "../bestseeling.css"
+import axios from "axios";
 
 const BestSeeling = () => {
   const scrollContainerRef = useRef(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
 
-  const products = [
-    { id: 1, name: "The Hilton Hotel", price: 850 },
-    { id: 2, name: "Luxury Suite", price: 950 },
-    { id: 3, name: "Ocean View Room", price: 750 },
-    { id: 4, name: "Mountain Retreat", price: 650 },
-    { id: 5, name: "City Center Hotel", price: 550 },
-    { id: 6, name: "Beachfront Villa", price: 1250 },
-    { id: 7, name: "Countryside Cottage", price: 450 },
-    { id: 8, name: "Penthouse Suite", price: 1550 },
-  ];
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const bestseelingproduct = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/api/bestseelingproduct"); // Fetch products
+        setProducts(response.data); // Update state
+      } catch (error) {
+        console.error("Error fetching flash products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    bestseelingproduct();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+
 
   const scroll = (direction) => {
     if (!scrollContainerRef.current) return;
@@ -52,12 +63,12 @@ const BestSeeling = () => {
         )}
 
         <div ref={scrollContainerRef} className="scroll-container" onScroll={handleScroll}>
-          {products.map((product) => (
+          {products.bestseelingProduct.map((product) => (
             <div key={product.id} className="product-card">
               <a href="#">
                 <div className="product-image">
                   <img
-                    src="https://t3.ftcdn.net/jpg/02/10/85/26/360_F_210852662_KWN4O1tjxIQt8axc2r82afdSwRSLVy7g.jpg"
+                    src={product.img}
                     alt={product.name}
                   />
                   <div className="product-overlay">

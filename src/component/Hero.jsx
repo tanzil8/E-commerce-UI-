@@ -132,7 +132,7 @@ const SidebarWithbanner = () => {
           {/* Main content */}
           <div className="relative rounded-lg overflow-hidden shadow-lg max-w-2xl mx-auto m-5">
       {/* Image Display */}
-      <div className="relative h-70 md:h-96">
+      <div className="relative h-70 md:h-96 ">
         <img
           src={slides[currentIndex]}
           className="object-cover w-full h-full transition-opacity duration-700 ease-in-out"
