@@ -10,25 +10,7 @@ const FlashProduct = () => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
 
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchFlashProducts = async () => {
-      try {
-        const response = await axios.get("http://localhost:3000/api/flashproducts"); // Fetch products
-        setProducts(response.data); // Update state
-      } catch (error) {
-        console.error("Error fetching flash products:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchFlashProducts();
-  }, []);
-
-  if (loading) return <p>Loading...</p>;
+ 
 
   const scroll = (direction) => {
     if (!scrollContainerRef.current) return;
@@ -64,27 +46,27 @@ const FlashProduct = () => {
         </button>
       )}
 
-      <div ref={scrollContainerRef} className="scroll-container" onScroll={handleScroll}>
-        {products.flashData.map((product) => (
-          <div key={product.id} className="product-card">
-           
-              <div className="product-image">
-                <img
-                  src={product.img}
-                  alt={product.name}
-                />
-                <div className="product-overlay">
-                  <button className="add-to-cart">Add to Cart</button>
-                </div>
-              </div>
-              <div className="product-info">
-                <h2>{product.name}</h2>
-                <p className="product-price">${product.price}</p>
-              </div>
-        
-          </div>
-        ))}
-      </div>
+<div ref={scrollContainerRef} className="scroll-container" onScroll={handleScroll}>
+       
+       <div  className="product-card">
+         <a href="">
+           <div className="product-image">
+             <img
+               src="https://1ststep.pk/cdn/shop/files/6_ad59d255-a4ec-4b7e-bde5-f3abab93952a_2048x.jpg?v=1704113247"
+               alt="shose"
+             />
+             <div className="product-overlay">
+               <button className="add-to-cart">Add to Cart</button>
+             </div>
+           </div>
+           <div className="product-info">
+             <h2>Shose</h2>
+             <p className="product-price">$9999</p>
+           </div>
+         </a>
+       </div>
+ 
+   </div>
     </div>
   </section>
   );
