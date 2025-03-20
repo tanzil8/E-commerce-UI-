@@ -179,9 +179,9 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <a className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
-                    Collections
-                  </a>
+                <Link to="/signup" className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
+                   Signup
+                  </Link>
                 </li>
                 <li>
                   <a className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
