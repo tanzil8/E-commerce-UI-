@@ -12,16 +12,17 @@ export default function BillingDetailsPage() {
   return (
     <>
       <Navbar/>
-    <div className="container mx-auto px-4 py-8 md:py-12">
+    <div className="container mx-auto px-4 py-8 md:py-12 bg-gray-100">
       <div className="grid gap-8 md:grid-cols-3">
         <div className="md:col-span-2">
-          <Card className="shadow-lg transition-all duration-300">
-            <CardHeader className="bg-gradient-to-r from-violet-500 to-purple-600 text-white p-4">
-              <Typography variant="h5">Checkout</Typography>
-              <Typography variant="body2">Complete your purchase securely</Typography>
-            </CardHeader>
-            <Tabs value={activeTab} onChange={(e, newValue) => setActiveTab(newValue)} centered>
-              <Tab label="Details" />
+          <Card className="shadow-lg transition-all duration-300 ">
+            <div className="bg-gradient-to-r bg-black  text-white p-4">
+            
+              <Typography variant="h5">Billing Details</Typography>
+             
+            </div >
+            <Tabs   value={activeTab} onChange={(e, newValue) => setActiveTab(newValue)} centered>
+              <Tab  label="Details"  />
               <Tab label="Shipping" />
               <Tab label="Payment" />
             </Tabs>
@@ -33,7 +34,15 @@ export default function BillingDetailsPage() {
                   <TextField label="Email" type="email" variant="outlined" fullWidth />
                   <TextField label="Phone Number" type="tel" variant="outlined" fullWidth />
                   <div className="flex justify-between mt-4">
-                    <Button variant="outlined" onClick={() => setActiveTab(1)}>
+                    <Button variant="outlined" style={{    backgroundColor: "rgb(153, 27, 27)",
+    color: "white",
+    border: "2px solid rgb(127, 20, 20)",
+    transition: "all 0.3s ease-in-out",
+    "&:hover": {
+      backgroundColor: "rgb(127, 20, 20)",
+      transform: "scale(1.05)",
+      boxShadow: "0px 4px 15px rgba(255, 0, 0, 0.6)",
+    } }} onClick={() => setActiveTab(1)}>
                       Continue to Shipping
                     </Button>
                   </div>
@@ -47,10 +56,27 @@ export default function BillingDetailsPage() {
                   <TextField label="ZIP/Postal Code" variant="outlined" fullWidth />
                   <TextField label="Country" variant="outlined" fullWidth />
                   <div className="flex justify-between mt-4">
-                    <Button variant="outlined" onClick={() => setActiveTab(0)}>
+                    <Button variant="outlined" style={{    backgroundColor: "white",
+    color: "rgb(127, 20, 20)",
+
+    border: "1px solid rgb(127, 20, 20)",
+    transition: "all 0.3s ease-in-out",
+    "&:hover": {
+      backgroundColor: "rgb(127, 20, 20)",
+      transform: "scale(1.05)",
+      boxShadow: "0px 4px 15px rgba(255, 0, 0, 0.6)",
+    } }} onClick={() => setActiveTab(0)}>
                       Back
                     </Button>
-                    <Button variant="contained" color="primary" onClick={() => setActiveTab(2)}>
+                    <Button variant="contained" color="primary" style={{    backgroundColor: "rgb(153, 27, 27)",
+    color: "white",
+    border: "2px solid rgb(127, 20, 20)",
+    transition: "all 0.3s ease-in-out",
+    "&:hover": {
+      backgroundColor: "rgb(127, 20, 20)",
+      transform: "scale(1.05)",
+      boxShadow: "0px 4px 15px rgba(255, 0, 0, 0.6)",
+    } }} onClick={() => setActiveTab(2)}>
                       Continue to Payment
                     </Button>
                   </div>
@@ -70,10 +96,27 @@ export default function BillingDetailsPage() {
                     <TextField label="CVC" variant="outlined" />
                   </div>
                   <div className="flex justify-between mt-4">
-                    <Button variant="outlined" onClick={() => setActiveTab(1)}>
+                    <Button variant="outlined" style={{    backgroundColor: "white",
+    color: "rgb(127, 20, 20)",
+
+    border: "1px solid rgb(127, 20, 20)",
+    transition: "all 0.3s ease-in-out",
+    "&:hover": {
+      backgroundColor: "rgb(127, 20, 20)",
+      transform: "scale(1.05)",
+      boxShadow: "0px 4px 15px rgba(255, 0, 0, 0.6)",
+    } }} onClick={() => setActiveTab(1)}>
                       Back
                     </Button>
-                    <Button variant="contained" color="primary">
+                    <Button variant="contained" style={{    backgroundColor: "rgb(153, 27, 27)",
+    color: "white",
+    border: "2px solid rgb(127, 20, 20)",
+    transition: "all 0.3s ease-in-out",
+    "&:hover": {
+      backgroundColor: "rgb(127, 20, 20)",
+      transform: "scale(1.05)",
+      boxShadow: "0px 4px 15px rgba(255, 0, 0, 0.6)",
+    } }} color="primary">
                       Complete Purchase
                     </Button>
                   </div>
