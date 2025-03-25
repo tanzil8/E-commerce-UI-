@@ -5,6 +5,8 @@ import Cart from './page/Cart';
 import BillingDetailsPage from './page/OrderDetail';
 import Signup from './page/Signup';
 import Login from './page/login';
+import Productdetail from './page/productdetail';
+import Contact from './page/contect';
 
 
 const App = () => {
@@ -18,6 +20,8 @@ const App = () => {
         <Route path="/billingdetail" element={<div className='bg-gray-100'><BillingDetailsPage/></div>} />
         <Route path="/signup" element={<div className='bg-gray-100'><Signup/></div>} />
         <Route path="/login" element={<div className='bg-gray-100'><Login/></div>} />
+        <Route path="/productdetail" element={<div className='bg-gray-100 '><Productdetail/></div>} />
+        <Route path="/contact" element={<div className='bg-gray-100 '><Contact/></div>} />
 
       </Routes>
     </BrowserRouter>
