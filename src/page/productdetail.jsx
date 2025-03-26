@@ -4,309 +4,218 @@ import Footer from '../component/footer'
 
 const Productdetail = () => {
   return (
-    <section className="relative bg-gray-100 ">
-        <Navbar/>
-    <div className="w-full mx-auto px-4 sm:px-6 lg:px-0 mt-6 mb-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mx-auto max-md:px-2 ">
-        <div className="img">
-          <div className="img-box h-full max-lg:mx-auto flex justify-center ">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfsKcLtcDvagrqCxPXwH7LG9Nddg1K83l6tQ&s"
-              alt="Yellow Tropical Printed Shirt image"
-              className=""
-            />
-          </div>
+    <>
+      <Navbar/>
+    <section className="py-8  md:py-16 dark:bg-gray-900 antialiased">
+    <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0">
+      <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
+        <div className="shrink-0 max-w-md lg:max-w-lg mx-auto">
+          <img
+            className="w-full dark:hidden"
+            src="https://media1.thrillophilia.com/filestore/uwpz857lua13qmvub6um2v93dlrm_IMG%20Worlds%20%20of%20Adventure.jpg"
+            alt=""
+          />
+          <img
+            className="w-full hidden dark:block"
+            src="https://media1.thrillophilia.com/filestore/uwpz857lua13qmvub6um2v93dlrm_IMG%20Worlds%20%20of%20Adventure.jpg"
+            alt=""
+          />
         </div>
-        <div className="data w-full lg:pr-8 pr-0 xl:justify-start justify-center flex items-center max-lg:pb-10 xl:my-2 lg:my-5 my-0">
-          <div className="data w-full max-w-xl">
-            <p className="text-lg font-medium leading-8 text-red-800 mb-4">
-              Clothing&nbsp; /&nbsp; Menswear
+        <div className="mt-6 sm:mt-8 lg:mt-0">
+          <h1 className="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">
+            Apple iMac 24" All-In-One Computer, Apple M1, 8GB RAM, 256GB SSD, Mac
+            OS, Pink
+          </h1>
+          <div className="mt-4 sm:items-center sm:gap-4 sm:flex">
+            <p className="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
+              $1,249.99
             </p>
-            <h2 className="font-manrope font-bold text-3xl leading-10 text-gray-900 mb-2 capitalize">
-              Basic Yellow Tropical Printed Shirt
-            </h2>
-            <div className="flex flex-col sm:flex-row sm:items-center mb-6">
-              <h6 className="font-manrope font-semibold text-2xl leading-9 text-gray-900 pr-5 sm:border-r border-gray-200 mr-5">
-                $220
-              </h6>
-              <div className="flex items-center gap-2">
-                <div className="flex items-center gap-1">
-                  <svg
-                    width={20}
-                    height={20}
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clipPath="url(#clip0_12029_1640)">
-                      <path
-                        d="M9.10326 2.31699C9.47008 1.57374 10.5299 1.57374 10.8967 2.31699L12.7063 5.98347C12.8519 6.27862 13.1335 6.48319 13.4592 6.53051L17.5054 7.11846C18.3256 7.23765 18.6531 8.24562 18.0596 8.82416L15.1318 11.6781C14.8961 11.9079 14.7885 12.2389 14.8442 12.5632L15.5353 16.5931C15.6754 17.41 14.818 18.033 14.0844 17.6473L10.4653 15.7446C10.174 15.5915 9.82598 15.5915 9.53466 15.7446L5.91562 17.6473C5.18199 18.033 4.32456 17.41 4.46467 16.5931L5.15585 12.5632C5.21148 12.2389 5.10393 11.9079 4.86825 11.6781L1.94038 8.82416C1.34687 8.24562 1.67438 7.23765 2.4946 7.11846L6.54081 6.53051C6.86652 6.48319 7.14808 6.27862 7.29374 5.98347L9.10326 2.31699Z"
-                        fill="#FBBF24"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_12029_1640">
-                        <rect width={20} height={20} fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <svg
-                    width={20}
-                    height={20}
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clipPath="url(#clip0_12029_1640)">
-                      <path
-                        d="M9.10326 2.31699C9.47008 1.57374 10.5299 1.57374 10.8967 2.31699L12.7063 5.98347C12.8519 6.27862 13.1335 6.48319 13.4592 6.53051L17.5054 7.11846C18.3256 7.23765 18.6531 8.24562 18.0596 8.82416L15.1318 11.6781C14.8961 11.9079 14.7885 12.2389 14.8442 12.5632L15.5353 16.5931C15.6754 17.41 14.818 18.033 14.0844 17.6473L10.4653 15.7446C10.174 15.5915 9.82598 15.5915 9.53466 15.7446L5.91562 17.6473C5.18199 18.033 4.32456 17.41 4.46467 16.5931L5.15585 12.5632C5.21148 12.2389 5.10393 11.9079 4.86825 11.6781L1.94038 8.82416C1.34687 8.24562 1.67438 7.23765 2.4946 7.11846L6.54081 6.53051C6.86652 6.48319 7.14808 6.27862 7.29374 5.98347L9.10326 2.31699Z"
-                        fill="#FBBF24"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_12029_1640">
-                        <rect width={20} height={20} fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <svg
-                    width={20}
-                    height={20}
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clipPath="url(#clip0_12029_1640)">
-                      <path
-                        d="M9.10326 2.31699C9.47008 1.57374 10.5299 1.57374 10.8967 2.31699L12.7063 5.98347C12.8519 6.27862 13.1335 6.48319 13.4592 6.53051L17.5054 7.11846C18.3256 7.23765 18.6531 8.24562 18.0596 8.82416L15.1318 11.6781C14.8961 11.9079 14.7885 12.2389 14.8442 12.5632L15.5353 16.5931C15.6754 17.41 14.818 18.033 14.0844 17.6473L10.4653 15.7446C10.174 15.5915 9.82598 15.5915 9.53466 15.7446L5.91562 17.6473C5.18199 18.033 4.32456 17.41 4.46467 16.5931L5.15585 12.5632C5.21148 12.2389 5.10393 11.9079 4.86825 11.6781L1.94038 8.82416C1.34687 8.24562 1.67438 7.23765 2.4946 7.11846L6.54081 6.53051C6.86652 6.48319 7.14808 6.27862 7.29374 5.98347L9.10326 2.31699Z"
-                        fill="#FBBF24"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_12029_1640">
-                        <rect width={20} height={20} fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <svg
-                    width={20}
-                    height={20}
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clipPath="url(#clip0_12029_1640)">
-                      <path
-                        d="M9.10326 2.31699C9.47008 1.57374 10.5299 1.57374 10.8967 2.31699L12.7063 5.98347C12.8519 6.27862 13.1335 6.48319 13.4592 6.53051L17.5054 7.11846C18.3256 7.23765 18.6531 8.24562 18.0596 8.82416L15.1318 11.6781C14.8961 11.9079 14.7885 12.2389 14.8442 12.5632L15.5353 16.5931C15.6754 17.41 14.818 18.033 14.0844 17.6473L10.4653 15.7446C10.174 15.5915 9.82598 15.5915 9.53466 15.7446L5.91562 17.6473C5.18199 18.033 4.32456 17.41 4.46467 16.5931L5.15585 12.5632C5.21148 12.2389 5.10393 11.9079 4.86825 11.6781L1.94038 8.82416C1.34687 8.24562 1.67438 7.23765 2.4946 7.11846L6.54081 6.53051C6.86652 6.48319 7.14808 6.27862 7.29374 5.98347L9.10326 2.31699Z"
-                        fill="#FBBF24"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_12029_1640">
-                        <rect width={20} height={20} fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <svg
-                    width={20}
-                    height={20}
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clipPath="url(#clip0_8480_66029)">
-                      <path
-                        d="M9.10326 2.31699C9.47008 1.57374 10.5299 1.57374 10.8967 2.31699L12.7063 5.98347C12.8519 6.27862 13.1335 6.48319 13.4592 6.53051L17.5054 7.11846C18.3256 7.23765 18.6531 8.24562 18.0596 8.82416L15.1318 11.6781C14.8961 11.9079 14.7885 12.2389 14.8442 12.5632L15.5353 16.5931C15.6754 17.41 14.818 18.033 14.0844 17.6473L10.4653 15.7446C10.174 15.5915 9.82598 15.5915 9.53466 15.7446L5.91562 17.6473C5.18199 18.033 4.32456 17.41 4.46467 16.5931L5.15585 12.5632C5.21148 12.2389 5.10393 11.9079 4.86825 11.6781L1.94038 8.82416C1.34687 8.24562 1.67438 7.23765 2.4946 7.11846L6.54081 6.53051C6.86652 6.48319 7.14808 6.27862 7.29374 5.98347L9.10326 2.31699Z"
-                        fill="#F3F4F6"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_8480_66029">
-                        <rect width={20} height={20} fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-                <span className="pl-2 font-normal leading-7 text-gray-500 text-sm ">
-                  1624 review
-                </span>
+            <div className="flex items-center gap-2 mt-2 sm:mt-0">
+              <div className="flex items-center gap-1">
+                <svg
+                  className="w-4 h-4 text-yellow-300"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                </svg>
+                <svg
+                  className="w-4 h-4 text-yellow-300"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                </svg>
+                <svg
+                  className="w-4 h-4 text-yellow-300"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                </svg>
+                <svg
+                  className="w-4 h-4 text-yellow-300"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                </svg>
+                <svg
+                  className="w-4 h-4 text-yellow-300"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                </svg>
               </div>
-            </div>
-            <p className="text-gray-500 text-base font-normal mb-5">
-              Introducing our vibrant Basic Yellow Tropical Printed Shirt - a
-              celebration of style and sunshine! Embrace the essence of summer
-              wherever you go with this eye-catching piece that effortlessly
-              blends comfort and tropical flair.{" "}
-              <a href="#" className="text-red-800">
-                More....
+              <p className="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
+                (5.0)
+              </p>
+              <a
+                href="#"
+                className="text-sm font-medium leading-none text-gray-900 underline hover:no-underline dark:text-white"
+              >
+                345 Reviews
               </a>
-            </p>
-            <ul className="grid gap-y-4 mb-8">
-              <li className="flex items-center gap-3">
-               <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
-                <span className="font-normal text-base text-gray-900 ">
-                  Branded shirt
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-               <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
-                <span className="font-normal text-base text-gray-900 ">
-                  3 color shirt
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
-                <span className="font-normal text-base text-gray-900 ">
-                  Pure Cotton Shirt with 60% as 40%
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
-                <span className="font-normal text-base text-gray-900 ">
-                  all size is available
-                </span>
-              </li>
-            </ul>
-            <p className="text-gray-900 text-lg leading-8 font-medium mb-4">
-              Size
-            </p>
-            <div className="w-full pb-8 border-b border-gray-100 flex-wrap">
-              <div className="grid grid-cols-3 min-[400px]:grid-cols-5 gap-3 max-w-md">
-                <button className="bg-white text-center py-1.5 px-6 w-full font-semibold text-lg leading-8 text-gray-900 border border-gray-200 flex items-center rounded-full justify-center transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-100 hover:border-gray-300 visited:border-gray-300 visited:bg-gray-50">
-                  S
-                </button>
-                <button className="bg-white text-center py-1.5 px-6 w-full font-semibold text-lg leading-8 text-gray-900 border border-gray-200 flex items-center rounded-full justify-center transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-100 hover:border-gray-300 visited:border-gray-300 visited:bg-gray-50">
-                  M
-                </button>
-                <button className="bg-white text-center py-1.5 px-6 w-full font-semibold text-lg leading-8 text-gray-900 border border-gray-200 flex items-center rounded-full justify-center transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-100 hover:border-gray-300 visited:border-gray-300 visited:bg-gray-50">
-                  L
-                </button>
-                <button className="bg-white text-center py-1.5 px-6 w-full font-semibold text-lg leading-8 text-gray-900 border border-gray-200 flex items-center rounded-full justify-center transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-100 hover:border-gray-300 visited:border-gray-300 visited:bg-gray-50">
-                  XL
-                </button>
-                <button className="bg-white text-center py-1.5 px-6 w-full font-semibold text-lg leading-8 text-gray-900 border border-gray-200 flex items-center rounded-full justify-center transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-100 hover:border-gray-300 visited:border-gray-300 visited:bg-gray-50">
-                  XXL
-                </button>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-8">
-              <div className="flex sm:items-center sm:justify-center w-full">
-                <button className="group py-4 px-6 border border-gray-400 rounded-l-full bg-white transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-300">
-                  <svg
-                    className="stroke-gray-900 group-hover:stroke-black"
-                    width={22}
-                    height={22}
-                    viewBox="0 0 22 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.5 11H5.5"
-                      stroke=""
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M16.5 11H5.5"
-                      stroke=""
-                      strokeOpacity="0.2"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M16.5 11H5.5"
-                      stroke=""
-                      strokeOpacity="0.2"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </button>
-                <input
-                  type="text"
-                  className="font-semibold text-gray-900 cursor-pointer text-lg py-[13px] px-6 w-full sm:max-w-[118px] outline-0 border-y border-gray-400 bg-transparent placeholder:text-gray-900 text-center hover:bg-gray-50"
-                  placeholder={1}
-                />
-                <button className="group py-4 px-6 border border-gray-400 rounded-r-full bg-white transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-300">
-                  <svg
-                    className="stroke-gray-900 group-hover:stroke-black"
-                    width={22}
-                    height={22}
-                    viewBox="0 0 22 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11 5.5V16.5M16.5 11H5.5"
-                      stroke="#9CA3AF"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M11 5.5V16.5M16.5 11H5.5"
-                      stroke="black"
-                      strokeOpacity="0.2"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M11 5.5V16.5M16.5 11H5.5"
-                      stroke="black"
-                      strokeOpacity="0.2"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <button className="group py-4 px-5 rounded-full bg-indigo-50 text-red-800 font-semibold text-lg w-full flex items-center justify-center gap-2 transition-all duration-500 hover:bg-indigo-100">
-                <svg
-                  className="stroke-red-800 "
-                  width={22}
-                  height={22}
-                  viewBox="0 0 22 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.7394 17.875C10.7394 18.6344 10.1062 19.25 9.32511 19.25C8.54402 19.25 7.91083 18.6344 7.91083 17.875M16.3965 17.875C16.3965 18.6344 15.7633 19.25 14.9823 19.25C14.2012 19.25 13.568 18.6344 13.568 17.875M4.1394 5.5L5.46568 12.5908C5.73339 14.0221 5.86724 14.7377 6.37649 15.1605C6.88573 15.5833 7.61377 15.5833 9.06984 15.5833H15.2379C16.6941 15.5833 17.4222 15.5833 17.9314 15.1605C18.4407 14.7376 18.5745 14.0219 18.8421 12.5906L19.3564 9.84059C19.7324 7.82973 19.9203 6.8243 19.3705 6.16215C18.8207 5.5 17.7979 5.5 15.7522 5.5H4.1394ZM4.1394 5.5L3.66797 2.75"
-                    stroke=""
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                Add to cart
-              </button>
-            </div>
-            <div className="flex items-center gap-3">
-              <button className="group transition-all duration-500 p-4 rounded-full bg-indigo-50 hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={26}
-                  height={26}
-                  viewBox="0 0 26 26"
-                  fill="none"
-                >
-                  <path
-                    d="M4.47084 14.3196L13.0281 22.7501L21.9599 13.9506M13.0034 5.07888C15.4786 2.64037 19.5008 2.64037 21.976 5.07888C24.4511 7.5254 24.4511 11.4799 21.9841 13.9265M12.9956 5.07888C10.5204 2.64037 6.49824 2.64037 4.02307 5.07888C1.54789 7.51738 1.54789 11.4799 4.02307 13.9184M4.02307 13.9184L4.04407 13.939M4.02307 13.9184L4.46274 14.3115"
-                    stroke="#4F46E5"
-                    strokeWidth="1.6"
-                    strokeMiterlimit={10}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-              <button className="text-center w-full px-5 py-4 rounded-[100px] bg-red-800  hover:bg-red-700  focus:bg-red focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300 flex items-center justify-center font-semibold text-lg text-white shadow-sm ">
-                Buy Now
-              </button>
             </div>
           </div>
+          <div className="flex sm:items-center sm:justify-start mt-6 w-full">
+                  <button className="group py-4 px-6 border border-gray-400 rounded-l-full bg-white transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-300">
+                    <svg
+                      className="stroke-gray-900 group-hover:stroke-black"
+                      width={22}
+                      height={22}
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M16.5 11H5.5" stroke="" strokeWidth="1.6" strokeLinecap="round" />
+                      <path d="M16.5 11H5.5" stroke="" strokeOpacity="0.2" strokeWidth="1.6" strokeLinecap="round" />
+                      <path d="M16.5 11H5.5" stroke="" strokeOpacity="0.2" strokeWidth="1.6" strokeLinecap="round" />
+                    </svg>
+                  </button>
+                  <input
+                    type="text"
+                    className="font-semibold text-gray-900 cursor-pointer text-lg py-[13px] px-6 w-full sm:max-w-[118px] outline-0 border-y border-gray-400 bg-transparent placeholder:text-gray-900 text-center hover:bg-gray-50"
+                    placeholder={1}
+                  />
+                  <button className="group py-4 px-6 border border-gray-400 rounded-r-full bg-white transition-all duration-300 hover:bg-gray-50 hover:shadow-sm hover:shadow-gray-300">
+                    <svg
+                      className="stroke-gray-900 group-hover:stroke-black"
+                      width={22}
+                      height={22}
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M11 5.5V16.5M16.5 11H5.5" stroke="#9CA3AF" strokeWidth="1.6" strokeLinecap="round" />
+                      <path
+                        d="M11 5.5V16.5M16.5 11H5.5"
+                        stroke="black"
+                        strokeOpacity="0.2"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M11 5.5V16.5M16.5 11H5.5"
+                        stroke="black"
+                        strokeOpacity="0.2"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+          <div className="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
+            <a
+              href="#"
+              title=""
+              className="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              role="button"
+            >
+              <svg
+                className="w-5 h-5 -ms-2 me-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"
+                />
+              </svg>
+              Add to favorites
+            </a>
+            <a
+              href="#"
+              title=""
+              className=" bg-red-800 text-white  font-xl  sm:mb-0 rounded-md hover:bg-red-700  focus:bg-red focus:outline-none focus:ring-2 focus:ring-offset-2  transition-colors duration-300 text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700  dark:focus:ring-primary-800 flex items-center justify-center"
+              role="button"
+            >
+              <svg
+                className="w-5 h-5 -ms-2 me-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
+                />
+              </svg>
+              Add to cart
+            </a>
+          </div>
+          <hr className="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
+          <p className="mb-6 text-gray-500 dark:text-gray-400">
+            Studio quality three mic array for crystal clear calls and voice
+            recordings. Six-speaker sound system for a remarkably robust and
+            high-quality audio experience. Up to 256GB of ultrafast SSD storage.
+          </p>
+          <p className="text-gray-500 dark:text-gray-400">
+            Two Thunderbolt USB 4 ports and up to two USB 3 ports. Ultrafast Wi-Fi
+            6 and Bluetooth 5.0 wireless. Color matched Magic Mouse with Magic
+            Keyboard or Magic Keyboard with Touch ID.
+          </p>
         </div>
       </div>
     </div>
-    <Footer/>
+    
   </section>
+  <Footer/>
+  </>
   
   )
 }
