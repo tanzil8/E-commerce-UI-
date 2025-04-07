@@ -18,7 +18,8 @@ const SidebarWithbanner = () => {
   };
     return (
       <>
-        <div className="flex h-96 bg-gray-100">
+      
+        <div className="flex h-96  bg-gray-100">
           {/* Mobile menu hamburger button */}
           <label
             htmlFor="menu-toggle"

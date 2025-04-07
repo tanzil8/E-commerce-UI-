@@ -7,6 +7,8 @@ import Signup from './page/Signup';
 import Login from './page/login';
 import Productdetail from './page/productdetail';
 import Contact from './page/contect';
+import About from './page/about';
+
 
 
 const App = () => {
@@ -22,6 +24,8 @@ const App = () => {
         <Route path="/login" element={<div className='bg-gray-100'><Login/></div>} />
         <Route path="/productdetail" element={<div className='bg-gray-100 '><Productdetail/></div>} />
         <Route path="/contact" element={<div className='bg-gray-100 '><Contact/></div>} />
+        <Route path="/about" element={<div className='bg-gray-100 '><About/></div>} />
+ 
 
       </Routes>
     </BrowserRouter>

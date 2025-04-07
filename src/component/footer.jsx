@@ -3,6 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
+
     <div className="bg-black mt-24">
       <div className="max-w-screen-lg px-4 sm:px-6 text-gray-300 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
         <div className="p-5">

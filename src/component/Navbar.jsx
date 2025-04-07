@@ -25,25 +25,26 @@ const Navbar = () => {
               {/* Nav Links */}
               <ul className="hidden xl:flex px-4 mx-auto font-semibold font-heading space-x-12">
                 <li>
-                <a className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
+                <Link to="/" className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
                     Home
-                    </a>
+                   
+                    </Link>
                 </li>
                 <li>
-                  <a className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
-                    Catagory
-                  </a>
+                <Link to="/contact" className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
+                   Contact
+                </Link>
                 </li>
                 <li>
-                  <a className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
-                    Collections
-                  </a>
+                <Link to="/about" className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
+                    About
+                  </Link>
                 </li>
                 <li>
 
-                  <a className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
-                    Contact Us
-                  </a>
+                <Link to="/signup" className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
+                     Signup
+                  </Link>
                 </li>
               </ul>
               {/* Header Icons */}
@@ -169,24 +170,25 @@ const Navbar = () => {
             <div className="xl:hidden bg-gray-100 text-black w-full">
               <ul className="flex flex-col px-4 py-4 font-semibold font-heading space-y-4">
                 <li>
-                  <a className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
+              <Link to="/" className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
                     Home
-                  </a>
+                 
+                  </Link>    
                 </li>
                 <li>
-                  <Link to="/billingdetail" className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
-                    Biling Details
+                  <Link to="/contact" className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
+                   Contact
+                  </Link>
+                </li>
+                <li>
+                <Link to="/about" className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
+                   About
                   </Link>
                 </li>
                 <li>
                 <Link to="/signup" className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
-                   Signup
+                    Sign up 
                   </Link>
-                </li>
-                <li>
-                  <a className="relative after:block after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full" href="#">
-                    Contact Us
-                  </a>
                 </li>
                 <li className="pt-4 border-t border-gray-700">
                   {/* Search Input for Mobile */}
