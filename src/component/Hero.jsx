@@ -160,7 +160,7 @@ const SidebarWithbanner = () => {
         className="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 transition"
       >
         <svg
-          className="w-5 h-5 text-gray-900"
+          className="w-full h-5 text-gray-900"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
