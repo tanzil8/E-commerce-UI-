@@ -23,15 +23,15 @@ const Product = () => {
 
   if (loading) return <p>Loading...</p>;
 console.log("products", products);
+
   return (
     <section className="py-12 px-4">
       <h1 className="mb-12 font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black">
         Category
       </h1>
       <div className="flex items-center justify-center flex-wrap gap-6">
-    
             <div  className="w-full sm:w-80 md:w-72">
-              <article className="rounded-xl bg-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+    {products.map((product) => (        <article className="rounded-xl bg-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 <a href="#" className="block">
                   <div className="relative overflow-hidden rounded-t-xl group">
                     <img
@@ -41,7 +41,7 @@ console.log("products", products);
                     />
                   </div>
                   <div className="mt-1 p-4">
-                    <h1 className="text-black font-bold text-2xl">shose</h1>
+                    <h1 className="text-black font-bold text-2xl">{product.name}</h1>
                     <h2 className="text-slate-700 mt-2">shose</h2>
                     <p className="text-slate-400 mt-1 text-sm"></p>
                     <div className="mt-3 flex items-center justify-between flex-wrap sm:flex-nowrap gap-2">
@@ -55,7 +55,8 @@ console.log("products", products);
                     </div>
                   </div>
                 </a>
-              </article>
+              </article>))}
+      
             </div>
         
       </div>

@@ -136,7 +136,7 @@ const SidebarWithbanner = () => {
       <div className="relative h-70 md:h-96 ">
         <img
           src={slides[currentIndex]}
-          className="object-cover w-full h-full transition-opacity duration-700 ease-in-out"
+          className="object-cover w-11/12 h-full transition-opacity duration-700 ease-in-out"
           alt={`Slide ${currentIndex + 1}`}
         />
       </div>
@@ -160,7 +160,7 @@ const SidebarWithbanner = () => {
         className="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 transition"
       >
         <svg
-          className="w-full h-5 text-gray-900"
+          className="w-5 h-5 text-gray-900"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
