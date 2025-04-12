@@ -1,28 +1,8 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+
 
 const Product = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get("http://localhost:3000/api/product");
-        console.log("Fetched products:", response.data.data);
-        setProducts(response.data.data); // Adjust this based on actual API response
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
-  if (loading) return <p>Loading...</p>;
-console.log("products", products);
+ 
 
   return (
     <section className="py-12 px-4">
@@ -31,7 +11,7 @@ console.log("products", products);
       </h1>
       <div className="flex items-center justify-center flex-wrap gap-6">
             <div  className="w-full sm:w-80 md:w-72">
-    {products.map((product) => (        <article className="rounded-xl bg-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+        <article className="rounded-xl bg-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 <a href="#" className="block">
                   <div className="relative overflow-hidden rounded-t-xl group">
                     <img
@@ -55,7 +35,7 @@ console.log("products", products);
                     </div>
                   </div>
                 </a>
-              </article>))}
+              </article>
       
             </div>
         
