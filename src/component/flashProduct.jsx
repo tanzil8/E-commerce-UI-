@@ -1,4 +1,4 @@
-import {  useRef } from "react";
+import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "../FlashProduct.css"
 import { useEffect, useState } from "react";
@@ -14,12 +14,13 @@ const FlashProduct = () => {
     axios.get("http://localhost:3000/api/flashproducts")
       .then(res => {
         console.log("✅ API response:", res.data);
-        setflashProducts(res.data);
+        setflashProducts(res.data.flashData);
       })
       .catch(err => {
         console.error("❌ Error fetching flashProducts:", err);
       });
   }, []);
+  console.log("flashProducts",flashProducts)
 
 
   const scrollContainerRef = useRef(null);
@@ -65,24 +66,26 @@ const FlashProduct = () => {
 <div ref={scrollContainerRef} className="scroll-container" onScroll={handleScroll}>
        
 
-       
-       <div  className="product-card">
-         <a href="">
+{flashProducts.map((flashProduct) => (
+   <div  className="product-card">
+         
            <div className="product-image">
              <img
-               src="https://1ststep.pk/cdn/shop/files/6_ad59d255-a4ec-4b7e-bde5-f3abab93952a_2048x.jpg?v=1704113247"
-               alt="shose"
+               src={flashProduct.img}
+               alt={flashProduct.name}
              />
              <div className="product-overlay">
                <button className="add-to-cart">Add to Cart</button>
              </div>
            </div>
            <div className="product-info">
-             <h2>Shose</h2>
-             <p className="product-price">$9999</p>
+             <h2>{flashProduct.name}</h2>
+             <p className="product-price">{flashProduct.price}</p>
            </div>
-         </a>
+        
        </div>
+      ))}
+      
  
    </div>
     </div>

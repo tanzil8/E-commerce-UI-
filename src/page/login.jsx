@@ -238,7 +238,7 @@ const Login = () => {
           </h1>
          
       
-          <form action="#" method="POST" className="space-y-4">
+          <form action="/api/login" method="POST" className="space-y-4">
             {/* Your form elements go here */}
            
             <div>
