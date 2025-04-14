@@ -1,11 +1,27 @@
-import { useState, useRef } from "react";
+import {  useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "../FlashProduct.css"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 
 const FlashProduct = () => {
+
+
+  const [flashProducts, setflashProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/api/flashproducts")
+      .then(res => {
+        console.log("✅ API response:", res.data);
+        setflashProducts(res.data);
+      })
+      .catch(err => {
+        console.error("❌ Error fetching flashProducts:", err);
+      });
+  }, []);
+
+
   const scrollContainerRef = useRef(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
@@ -47,6 +63,8 @@ const FlashProduct = () => {
       )}
 
 <div ref={scrollContainerRef} className="scroll-container" onScroll={handleScroll}>
+       
+
        
        <div  className="product-card">
          <a href="">
