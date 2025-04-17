@@ -4,6 +4,12 @@ import Footer from '../component/footer'
 import { Link } from 'react-router-dom'
 
 const Signup = () => {
+
+const  signupChange = (e) =>{
+  const {name , value} = e.target
+  console.log(name, value)
+}
+
   return (
     <>
     <Navbar/>
@@ -283,6 +289,7 @@ const Signup = () => {
                 Username
               </label>
               <input
+              onChange={signupChange}
                 type="text"
                 id="username"
                 name="username"
@@ -297,6 +304,7 @@ const Signup = () => {
                 Email
               </label>
               <input
+                onChange={signupChange}
                 type="text"
                 id="email"
                 name="email"
@@ -311,6 +319,7 @@ const Signup = () => {
                 Password
               </label>
               <input
+                onChange={signupChange}
                 type="password"
                 id="password"
                 name="password"
