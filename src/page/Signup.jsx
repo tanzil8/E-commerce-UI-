@@ -1,14 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../component/Navbar'
 import Footer from '../component/footer'
 import { Link } from 'react-router-dom'
+import { handleError } from '../utils'
 
 const Signup = () => {
+
+const [signupInfo, setsignupInfo] = useState({
+
+  email: '',
+  password: '',
+role: 'user'
+})
+
 
 const  signupChange = (e) =>{
   const {name , value} = e.target
   console.log(name, value)
+
+const copysignupInfo = {...signupInfo}
+copysignupInfo[name] = value
+setsignupInfo(copysignupInfo)
+
 }
+console.log(signupInfo);
+
+const handleSignup = (e) =>{
+  e.preventDefault()
+
+  const {name, email, userName, role} = signupInfo
+  if (!name || !email || !password || !role) {
+    return handleError("All feild are required")
+  }
+}
+
 
   return (
     <>
@@ -279,7 +304,7 @@ const  signupChange = (e) =>{
           <div className="mt-4 text-sm text-gray-600 text-center">
             <p>or with email</p>
           </div>
-          <form action="#" method="POST" className="space-y-4">
+          <form action="" onSubmit={handleSignup} method="POST" className="space-y-4">
             {/* Your form elements go here */}
             <div>
               <label
@@ -294,7 +319,8 @@ const  signupChange = (e) =>{
                 id="username"
                 name="username"
                 className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
-              />
+             value={signupInfo.name}
+             />
             </div>
             <div>
               <label
@@ -309,7 +335,8 @@ const  signupChange = (e) =>{
                 id="email"
                 name="email"
                 className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
-              />
+                value={signupInfo.email}
+             />
             </div>
             <div>
               <label
@@ -324,7 +351,8 @@ const  signupChange = (e) =>{
                 id="password"
                 name="password"
                 className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
-              />
+                value={signupInfo.password}
+           />
             </div>
             <div>
               <button
