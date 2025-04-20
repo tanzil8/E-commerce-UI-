@@ -3,6 +3,8 @@ import Navbar from '../component/Navbar'
 import Footer from '../component/footer'
 import { Link } from 'react-router-dom'
 import { handleError } from '../utils'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
 
@@ -10,7 +12,8 @@ const [signupInfo, setsignupInfo] = useState({
 
   email: '',
   password: '',
-role: 'user'
+role: 'user',
+name: ""
 })
 
 
@@ -25,14 +28,34 @@ setsignupInfo(copysignupInfo)
 }
 console.log(signupInfo);
 
-const handleSignup = (e) =>{
-  e.preventDefault()
+const handleSignup =  async (e) => {
+  e.preventDefault();
 
-  const {name, email, userName, role} = signupInfo
+  const { email, name, password, role } = signupInfo;
+
   if (!name || !email || !password || !role) {
-    return handleError("All feild are required")
+  alert('required')
+    return
+  }
+
+  
+  try {
+    const Url = "http://localhost:3000/api/signup"
+    const response = await fetch(Url,{
+      method: 'POST',
+      headers:{
+        'content-Type': 'application/json'
+      },
+  body:JSON.stringify(signupInfo)
+    })
+    const result = await response.json()
+    console.log(result);
+    
+  } catch (error) {
+    alert(error)
   }
 }
+
 
 
   return (
@@ -308,16 +331,16 @@ const handleSignup = (e) =>{
             {/* Your form elements go here */}
             <div>
               <label
-                htmlFor="username"
+                htmlFor="name"
                 className="block text-sm font-medium text-gray-700"
               >
-                Username
+                name
               </label>
               <input
               onChange={signupChange}
                 type="text"
-                id="username"
-                name="username"
+                id="name"
+                name="name"
                 className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
              value={signupInfo.name}
              />
@@ -356,6 +379,7 @@ const handleSignup = (e) =>{
             </div>
             <div>
               <button
+         
                 type="submit"
                 className="w-full bg-red-800 text-white p-2 rounded-md hover:bg-red-700  focus:bg-red focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300"
               >
