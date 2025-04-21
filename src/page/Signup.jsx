@@ -5,55 +5,24 @@ import { Link } from 'react-router-dom'
 import { handleError } from '../utils'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios'
 
 const Signup = () => {
 
-const [signupInfo, setsignupInfo] = useState({
+const [name, setName] = useState()
+const [email, setEmail] = useState()
+const [password, setPassword] = useState()
+const [role, setRole] = useState('user')
 
-  email: '',
-  password: '',
-role: 'user',
-name: ""
-})
-
-
-const  signupChange = (e) =>{
-  const {name , value} = e.target
-  console.log(name, value)
-
-const copysignupInfo = {...signupInfo}
-copysignupInfo[name] = value
-setsignupInfo(copysignupInfo)
-
-}
-console.log(signupInfo);
 
 const handleSignup =  async (e) => {
   e.preventDefault();
 
-  const { email, name, password, role } = signupInfo;
-
-  if (!name || !email || !password || !role) {
-  alert('required')
-    return
-  }
-
+ axios.post('http://localhost:3000/api/signup',{name, email, password, role})
+ .then(res=>console.log(res))
+.catch(err=>console.log(err))
   
-  try {
-    const Url = "http://localhost:3000/api/signup"
-    const response = await fetch(Url,{
-      method: 'POST',
-      headers:{
-        'content-Type': 'application/json'
-      },
-  body:JSON.stringify(signupInfo)
-    })
-    const result = await response.json()
-    console.log(result);
-    
-  } catch (error) {
-    alert(error)
-  }
+ 
 }
 
 
@@ -337,12 +306,12 @@ const handleSignup =  async (e) => {
                 name
               </label>
               <input
-              onChange={signupChange}
+              onChange={(e)=> setName(e.target.value)}
                 type="text"
                 id="name"
                 name="name"
                 className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
-             value={signupInfo.name}
+        
              />
             </div>
             <div>
@@ -353,12 +322,12 @@ const handleSignup =  async (e) => {
                 Email
               </label>
               <input
-                onChange={signupChange}
+                onChange={(e)=> setEmail(e.target.value)}
                 type="text"
                 id="email"
                 name="email"
                 className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
-                value={signupInfo.email}
+                
              />
             </div>
             <div>
@@ -369,12 +338,12 @@ const handleSignup =  async (e) => {
                 Password
               </label>
               <input
-                onChange={signupChange}
+                onChange={(e)=> setPassword(e.target.value)}
                 type="password"
                 id="password"
                 name="password"
                 className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
-                value={signupInfo.password}
+              
            />
             </div>
             <div>
