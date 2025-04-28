@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import Navbar from '../component/Navbar'
 import Footer from '../component/footer'
 import { Link } from 'react-router-dom'
-import { handleError } from '../utils'
-import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
 
