@@ -13,12 +13,18 @@ const [password, setPassword] = useState()
 const [role, setRole] = useState('user')
 
 
+const userDatta = ({
+  name: name,
+  email: email,
+  password: password,
+  role: role
+})
+
 const handleSignup =  async (e) => {
   e.preventDefault();
 
- axios.post('http://localhost:3000/api/signup',{name, email, password, role})
- .then(res=>console.log(res))
-.catch(err=>console.log(err))
+console.log(userDatta);
+
   
  
 }
