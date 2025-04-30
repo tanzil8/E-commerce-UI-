@@ -8,12 +8,14 @@ import Login from './page/login';
 import Productdetail from './page/productdetail';
 import Contact from './page/contect';
 import About from './page/about';
+import { AuthProvider } from './contexts/AuthContext.jsx';
 
 
 
 const App = () => {
   return (
-   
+    <AuthProvider>
+
     <BrowserRouter>
       <Routes>
 
@@ -29,6 +31,7 @@ const App = () => {
 
       </Routes>
     </BrowserRouter>
+    </AuthProvider>
  
   );
 };

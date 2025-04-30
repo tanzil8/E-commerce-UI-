@@ -4,6 +4,7 @@ import Footer from '../component/footer'
 import { Link } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
+import userSignup from '../hooks/useSignup.js';
 
 const Signup = () => {
 
@@ -12,6 +13,8 @@ const [email, setEmail] = useState()
 const [password, setPassword] = useState()
 const [role, setRole] = useState('user')
 
+
+const [loading, error, registerUser] = userSignup()
 
 const userDatta = ({
   name: name,
@@ -23,7 +26,7 @@ const userDatta = ({
 const handleSignup =  async (e) => {
   e.preventDefault();
 
-console.log(userDatta);
+  registerUser(userDatta);
 
   
  
